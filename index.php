@@ -9,6 +9,8 @@
     $new = new User($new_user);
     print_r($new);
     echo PHP_EOL . PHP_EOL . PHP_EOL;
+    $q = User::all();
+    print_r($q);
     $new->save();
     print_r($new);
 
