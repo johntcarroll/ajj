@@ -7,11 +7,12 @@
         'password' => 'test_pass_1'
     ];
     $new = new User($new_user);
+    echo $new->return_username();
     //print_r($new);
-    echo PHP_EOL . PHP_EOL . PHP_EOL;
+    echo "<br /><br /><br />";
     $q = User::all();
     foreach($q as $line) print_r($line->attributes());
-    print_r($q);
+    echo "<br /><br /><br />";
     $new->save();
     print_r($new);
 
