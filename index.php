@@ -1,5 +1,5 @@
 <?php
-    echo "hi";die();
+    echo "hi";
     include "controller/config.php";
     $test = User::all();
     print_r($test);
