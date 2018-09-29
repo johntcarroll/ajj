@@ -1,6 +1,6 @@
 <?php
     $u = $_POST['user'];
-    $p = $_POST['password'];
+    $p = $_POST['pass'];
     session_start();
     $id = new User([
         'username' => $u,

@@ -5,7 +5,7 @@
     <body>
         <div class='container'>
             <div class='row'>
-                <div class='col col-xs-4 col-xs-offset-4'>
+                <div class='col col-xs-4'>
                     <div class='card'>
                         <div class='card-header'>
                             LBC Login
@@ -14,13 +14,13 @@
                             <div class='row'>
                                 <div class='col col-xs-12'>
                                     <label>Username</label>
-                                    <input class='form-control' name='username' />
+                                    <input class='form-control' name='user' />
                                 </div>
                             </div>
                             <div class='row'>
                                 <div class='col col-xs-12'>
                                     <label>Password</label>
-                                    <input class='form-control' name='password' />
+                                    <input class='form-control' name='pass' />
                                 </div>
                             </div>
                         </div>
