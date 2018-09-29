@@ -7,9 +7,9 @@
         'username' => $u,
         'password' => $p
     ]);
-    if($id->login()){
-        print_r($id);die();
-        $_SESSION['user'] = $id->id;
+    $attempt = $id->login();
+    if($attempt){
+        $_SESSION['user'] = $attempt->id;
         session_write_close();
         header('Location: ../view/home.php');
     }else{
