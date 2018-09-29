@@ -5,6 +5,7 @@ class User extends ActiveRecord\Model{
     static $table_name = 'users';
 
     public function login(){
+        print_r($this);
         $attempt = static::find([
             'conditions' => [
                 'username = ? AND password = ?',
