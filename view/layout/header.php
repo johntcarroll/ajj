@@ -20,7 +20,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
-        <div class='container'>
+        
             <div class='row'>
                 <div class='col col-xs-12'>
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
