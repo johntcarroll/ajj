@@ -20,22 +20,21 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
-        
-            <div class='row'>
-                <div class='col col-xs-12'>
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <a class="navbar-brand" href="#">LBC Analytics</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+        <div class='row'>
+            <div class='col col-xs-12'>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">LBC Analytics</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                        <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">
-                                    Logged in as: <?=$loggedInUser->username;?>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                Logged in as: <?=$loggedInUser->username;?>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
+        </div>
