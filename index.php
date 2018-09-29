@@ -5,7 +5,7 @@
     <body>
         <div class='container'>
             <div class='row'>
-                <div class='col-xs-4 col-xs-offset-4'>
+                <div class='col-xs-8'>
                     <div class='card'>
                         <div class='card-header'>
                             LBC Login
