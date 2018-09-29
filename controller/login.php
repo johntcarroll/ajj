@@ -7,8 +7,8 @@
         'username' => $u,
         'password' => $p
     ]);
-    print_r($id->login());die();
     if($id->login()){
+        print_r($id);die();
         $_SESSION['user'] = $id->id;
         session_write_close();
         header('Location: ../view/home.php');
