@@ -18,7 +18,7 @@
                                 </div>
                             </div>
                             <div class='row'>
-                                <div class='col-xs-12'>
+                                <div class='col col-xs-12'>
                                     <label>Password</label>
                                     <input class='form-control' name='password' />
                                 </div>
