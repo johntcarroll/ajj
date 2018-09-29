@@ -1,7 +1,6 @@
 <?php
     include $root . "controller/config.php";
     session_start();
-    print_r($_SESSION);die();
     // check for login
     if(empty($_SESSION['user'])){
         session_write_close();
@@ -22,3 +21,17 @@
     </head>
     <body>
         <div class='container'>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">LBC Analytics</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                Logged in as: <?=$loggedInUser->username;?>
+            </li>
+        </ul>
+    </div>
+</nav>
