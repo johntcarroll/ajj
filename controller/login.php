@@ -8,7 +8,6 @@
         'password' => $p
     ]);
     if($id->login()){
-        echo 'success';die();
         $_SESSION['user'] = $id->id;
         session_write_close();
         header('Location: ../view/home.php');

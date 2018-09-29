@@ -1,6 +1,7 @@
 <?php
     include $root . "controller/config.php";
     session_start();
+    print_r($_SESSION);die();
     // check for login
     if(empty($_SESSION['user'])){
         session_write_close();
