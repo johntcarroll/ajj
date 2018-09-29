@@ -3,7 +3,7 @@
     include $root . "view/layout/header.php";
 ?>
 <div class='row'>
-    <div class='col-xs-12'>
+    <div class='col col-xs-12'>
         <h4>Coming Soon</h4>
         <ol>
             <li>
