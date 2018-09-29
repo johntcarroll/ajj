@@ -2,6 +2,7 @@
     include "config.php";
     $u = $_POST['user'];
     $p = $_POST['pass'];
+    print_r($_POST);
     session_start();
     $id = new User([
         'username' => $u,
