@@ -1,15 +1,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
         <div class='container'>
-            <div class='row'>
-                <div class='col-xs-12'>
-                    <h1>Lock Bay Capital</h1>
-                </div>
-            </div>
             <div class='row'>
                 <div class='col-xs-4 col-xs-offset-4'>
                     <div class='card'>
@@ -20,9 +14,6 @@
                             <div class='row'>
                                 <div class='col-xs-12'>
                                     <div class='input-group'>
-                                        <div class='input-group-prepend'>
-                                            <i class="fas fa-user"></i>
-                                        </div>
                                         <input class='form-control' name='username' placeholder='username' />
                                     </div>
                                 </div>
