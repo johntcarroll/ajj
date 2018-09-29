@@ -8,21 +8,19 @@
                 <div class='col-xs-4 col-xs-offset-4'>
                     <div class='card'>
                         <div class='card-header'>
-                            Lock Bay Captial Login
+                            LBC Login
                         </div>
                         <div class='card-body'>
                             <div class='row'>
                                 <div class='col-xs-12'>
-                                    <div class='input-group'>
-                                        <input class='form-control' name='username' placeholder='username' />
-                                    </div>
+                                    <label>Username</label>
+                                    <input class='form-control' name='username' />
                                 </div>
                             </div>
                             <div class='row'>
                                 <div class='col-xs-12'>
-                                    <div class='input-group'>
-                                        <input class='form-control' name='password' placeholder='password' />
-                                    </div>
+                                    <label>Password</label>
+                                    <input class='form-control' name='password' />
                                 </div>
                             </div>
                         </div>
