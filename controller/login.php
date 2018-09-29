@@ -7,6 +7,7 @@
         'username' => $u,
         'password' => $p
     ]);
+    print_r($id->login());die();
     if($id->login()){
         $_SESSION['user'] = $id->id;
         session_write_close();

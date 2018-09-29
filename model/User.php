@@ -5,12 +5,15 @@ class User extends ActiveRecord\Model{
     static $table_name = 'users';
 
     public function login(){
-        $conditions = [];
-        $conditions[] = 'username = ? AND password = ?';
-        $conditions[] = $this->username;
-        $conditions[] = $this->encrypt_pass();
+        $attempt = static::find([
+            'conditions' => [
+                'username = ? AND password = ?',
+                $this->username,
+                $this->encrypt_pass()
+            ]
+        ]);
 
-        return ($this->id ? $this : (static::find(['conditions' => $conditions] ?: FALSE)));
+        return ($attempt ?: FALSE);
     }
 
     public function encrypt_pass(){
