@@ -4,9 +4,21 @@ class User extends ActiveRecord\Model{
 
     static $table_name = 'users';
 
-    public function return_username(){
-        $value = "The username is: " . $this->username;
-        return $value;
+    public function login(){
+        $attempt = static::find([
+            'conditions' => [
+                'username = ? AND password = ?',
+                $this->username,
+                $this->encrypt_pass()
+            ]
+        ]);
+
+        return ($attempt ?: FALSE);
+    }
+
+    public function encrypt_pass(){
+        // TODO salt and encrypt password
+        return $this->password;
     }
 
 }
