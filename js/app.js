@@ -1,3 +1,10 @@
+$(document).ajaxStart(function(){
+  lock_screen();
+});
+$(document).ajaxStop(function(){
+  unlock_screen();
+});
+
 $(document).ready(function(){
     unlock_screen();
     load_sheet_data();
@@ -5,13 +12,6 @@ $(document).ready(function(){
     $("#db-save").click(save_to_db);
     $("#db-verify").click(verify_data);
     $("#remove-rows").click(remove_rows);
-});
-
-$(document).ajaxStart(function(){
-  lock_screen();
-});
-$(document).ajaxStop(function(){
-  unlock_screen();
 });
 
 function load_sheet_data(){
@@ -75,6 +75,10 @@ function remove_rows(){
 function handle_success(json){
     remove_rows();
     spreadsheet.loadData(json);
+}
+
+function handle_ajax_error(){
+    alert('AJAX ERROR.');
 }
 
 function exec_request(data, success_callback, error_callback = handle_ajax_error){
