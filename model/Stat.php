@@ -4,6 +4,7 @@ class Stat extends ActiveRecord\Model{
 
     static $table_name = 'stats';
     static $before_save = ['dup_check'];
+    static $belongs_to = ['comapny'];
 
     public function dup_check(){
         if($this->id) $check = Stat::find(['conditions' => ['company_id = ? AND date = ? AND id <> ?', $this->company_id, $this->date->format('Y-m-d'), $this->id]]);
