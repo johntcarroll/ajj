@@ -28,7 +28,8 @@ function init_sheet(json){
         outsideClickDeselects: false,
         afterChange: function(changes, source) {
             // TODO add code for changing status column
-        }
+        },
+        stretchH: 'all'
     };
 
     spreadsheet = new Handsontable(sheet_container[0], sheet_options);
