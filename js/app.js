@@ -10,7 +10,7 @@ $(document).ready(function(){
 function load_sheet_data(){
     var ad = {
         class: 'Stat',
-        fn: 'get_sheet_columns'
+        fn: 'load_sheet_data'
     }
     exec_request(ad, init_sheet);
 }
