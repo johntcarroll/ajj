@@ -18,8 +18,11 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="<?=$root;?>css/handsontable.full.css" rel="stylesheet">
+        <link href="<?=$root;?>css/style.css" rel="stylesheet">
     </head>
     <body>
+        <div class="loading" id='loader'>Loading&#8230;</div>
         <div class='row'>
             <div class='col col-xs-12'>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
