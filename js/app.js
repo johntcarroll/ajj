@@ -51,7 +51,7 @@ function load_from_db(){
 
 function save_to_db(){
     var ad = {
-        data: , // TODO get sheet data
+        rows: spreadsheet.getData(),
         class: 'Stat',
         fn: 'save_rows'
     }
@@ -60,7 +60,7 @@ function save_to_db(){
 
 function verify_data(){
     var ad = {
-        data: , // TODO get sheet data
+        rows: spreadsheet.getData(), 
         class: 'Stat',
         fn: 'verify_rows'
     }
