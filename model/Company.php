@@ -11,7 +11,7 @@ class Company extends ActiveRecord\Model{
         return ($check ? FALSE : TRUE);
     }
 
-    public static function filldrop($payload){
+    public static function filldrop(){
         $html = '';
         foreach(Company::all() as $comp)
             $html .= "<option value='" . $comp->id  "'>" . $comp->name . "(" . $comp->ticker ")" . "</option>";
