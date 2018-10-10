@@ -1,10 +1,3 @@
-$(document).ajaxStart(function(){
-  lock_screen();
-});
-$(document).ajaxStop(function(){
-  unlock_screen();
-});
-
 $(document).ready(function(){
     unlock_screen();
     load_sheet_data();
@@ -87,6 +80,8 @@ function exec_request(data, success_callback, error_callback = handle_ajax_error
         data: data,
         method: "post",
         dataType: "json",
+        beforeStart: lock_screen,
+        complete: unlock_screen,
         success: success_callback,
         error: error_callback
     });
