@@ -1,4 +1,5 @@
 <?php
+    require "config.php";
     $class = $_REQUEST['class'];
     unset($_REQUEST['class']);
     $fn = $_REQUEST['fn'];
