@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    unlock_screen();
     load_sheet_data();
     $("#db-load").click(load_from_db);
     $("#db-save").click(save_to_db);
@@ -60,7 +61,7 @@ function save_to_db(){
 
 function verify_data(){
     var ad = {
-        rows: spreadsheet.getData(), 
+        rows: spreadsheet.getData(),
         class: 'Stat',
         fn: 'verify_rows'
     }
@@ -87,10 +88,10 @@ function exec_request(data, success_callback, error_callback = handle_ajax_error
     });
 }
 
-function lock_screen(){
-    $("#loader").removeClass('hidden');
+function unlock_screen(){
+    $("#loader").addClass('d-none');
 }
 
-function unlock_screen(){
-    $("#loader").addClass('hidden');
+function lock_screen(){
+    $("#loader").removeClass('d-none');
 }
