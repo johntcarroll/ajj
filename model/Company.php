@@ -14,7 +14,7 @@ class Company extends ActiveRecord\Model{
     public static function filldrop(){
         $html = '';
         foreach(Company::all() as $comp)
-            $html .= "<option value='" . $comp->id  "'>" . $comp->name . "(" . $comp->ticker ")" . "</option>";
+            $html .= "<option value='" . $comp->id .  "'>" . $comp->name . "(" . $comp->ticker ")" . "</option>";
         return $html;
     }
 }
