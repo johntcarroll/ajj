@@ -80,7 +80,6 @@ class Stat extends ActiveRecord\Model{
         $response = [];
         $verified_tickers = [];
         foreach($rows as $row){
-            print_r($row);
             if(array_key_exists($row[0], $verified_tickers)){
                 $company = $verified_tickers[$row[0]];
             }else{
@@ -119,7 +118,6 @@ class Stat extends ActiveRecord\Model{
                     $status = 'Ticker Save Error,';
                 }
             }
-            print_r($row);
             $response[] = static::sheet_row([$row[0], $row[1], $row[2], $row[3], $status]);
         }
         return $response;
