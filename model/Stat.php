@@ -47,6 +47,7 @@ class Stat extends ActiveRecord\Model{
 
     public static function verify_rows($payload){
         $rows = static::trim_blanks($payload['rows']);
+        print_r($rows); die();
         $response = [];
         $verified_tickers = [];
         foreach($rows as $row){
