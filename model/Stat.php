@@ -165,14 +165,14 @@ class Stat extends ActiveRecord\Model{
         return $col_data;
     }
 
-}
+    public static function sheet_row($row_arr){
+        $row = new stdClass();
+        $row->ticker = $row_arr[0];
+        $row->date = $row_arr[1];
+        $row->close = $row_arr[2];
+        $row->web = $row_arr[3];
+        $row->status = $row_arr[4];
+        return $row;
+    }
 
-public static function sheet_row($row_arr){
-    $row = new stdClass();
-    $row->ticker = $row_arr[0];
-    $row->date = $row_arr[1];
-    $row->close = $row_arr[2];
-    $row->web = $row_arr[3];
-    $row->status = $row_arr[4];
-    return $row;
 }
