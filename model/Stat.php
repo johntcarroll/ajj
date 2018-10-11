@@ -80,6 +80,7 @@ class Stat extends ActiveRecord\Model{
         $response = [];
         $verified_tickers = [];
         foreach($rows as $row){
+            print_r($row);
             if(array_key_exists($row[0], $verified_tickers)){
                 $company = $verified_tickers[$row[0]];
             }else{
@@ -89,8 +90,6 @@ class Stat extends ActiveRecord\Model{
             if($company){
                 $existing = static::find(['conditions' => 'company_id = ? AND date = ?', $company->id, $row[1]]);
                 if($existing){
-                    $existing->company_id = $company->id;
-                    $existing->date = $row[1];
                     $existing->close = $row[2];
                     $existing->web = $row[3];
                     $status = ($existing->save() ? 'Synced' : 'Save Error');
@@ -108,7 +107,7 @@ class Stat extends ActiveRecord\Model{
                     'ticker' => $row[0]
                 ]);
                 if($company->save()){
-                    $verified_tickers[$company->ticker] = $company->id;
+                    $verified_tickers[$company->ticker] = $company;
                     $new = new Stat([
                         'company_id' => $company->id,
                         'date' => $row[1],
@@ -120,6 +119,7 @@ class Stat extends ActiveRecord\Model{
                     $status = 'Ticker Save Error,';
                 }
             }
+            print_r($row);
             $response[] = static::sheet_row([$row[0], $row[1], $row[2], $row[3], $status]);
         }
         return $response;
