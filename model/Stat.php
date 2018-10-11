@@ -59,12 +59,13 @@ class Stat extends ActiveRecord\Model{
             if($company){
                 $existing = static::find(['conditions' => ['company_id = ? AND date = ?', $company->id, $row[1]]]);
                 if($existing){
-                    print_r($existing); print_r($row);die();
+                    print_r($existing); print_r($row);
                     if($exisitng->close == $row[2] && $existing->web == $row[3]){
                         $status = "Synced";
                     }else{
                         $status = "Overwriting Existing Data";
                     }
+                    print_r($status);die();
                 }else{
                     $status = "New Line";
                 }
