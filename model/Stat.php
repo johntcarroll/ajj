@@ -63,7 +63,7 @@ class Stat extends ActiveRecord\Model{
                     var_dump($row[2]);
                     var_dump($existing->web);
                     var_dump($row[3]);
-                    if($exisitng->close == $row[2] && $existing->web == $row[3]){
+                    if($existing->close == $row[2] && $existing->web == $row[3]){
                         $status = "Synced";
                     }else{
                         $status = "Overwriting Existing Data";
