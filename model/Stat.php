@@ -59,6 +59,7 @@ class Stat extends ActiveRecord\Model{
             if($company){
                 $existing = static::find(['conditions' => ['company_id = ? AND date = ?', $company->id, $row[1]]]);
                 if($existing){
+                    print_r($existing);die();
                     if($exisitng->close == $row[2] && $existing->web == $row[3]){
                         $status = "Synced";
                     }else{
