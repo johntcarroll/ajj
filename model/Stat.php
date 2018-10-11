@@ -177,7 +177,7 @@ class Stat extends ActiveRecord\Model{
 
     public static function trim_blanks($rows){
         $response = [];
-        foreach($rows as $row) if(!empty($row[0] && !empty($row[1] && !empty($row[2] && !empty($row[3])) $response[] = $row;
+        foreach($rows as $row) if(!empty($row[0]) && !empty($row[1]) && !empty($row[2]) && !empty($row[3])) $response[] = $row;
         return $response;
     }
 
