@@ -75,7 +75,7 @@ class Stat extends ActiveRecord\Model{
         return $response;
     }
 
-    public static function save_rows(){
+    public static function save_rows($payload){
         $rows = static::trim_blanks($payload['rows']);
         $response = [];
         $verified_tickers = [];
