@@ -40,7 +40,7 @@ class Stat extends ActiveRecord\Model{
 
         // format rows for hands on table
         $response = [];
-        foreach($results as $result) $response[] = [$result->company->ticker, $result->date->format('Y-m-d'), $result->close, $result->web, 'Synced'];
+        foreach($results as $result) $response[] = static::sheet_row([$result->company->ticker, $result->date->format('Y-m-d'), $result->close, $result->web, 'Synced']);
         return $response;
 
     }
@@ -70,7 +70,7 @@ class Stat extends ActiveRecord\Model{
             }else{
                 $status = "New Ticker, New Line";
             }
-            $response[] = [$row[0], $row[1], $row[2], $row[3], $status];
+            $response[] = static::sheet_row([$row[0], $row[1], $row[2], $row[3], $status]);
         }
         return $response;
     }
@@ -120,7 +120,7 @@ class Stat extends ActiveRecord\Model{
                     $status = 'Ticker Save Error,';
                 }
             }
-            $response[] = [$row[0], $row[1], $row[2], $row[3], $status];
+            $response[] = static::sheet_row([$row[0], $row[1], $row[2], $row[3], $status]);
         }
         return $response;
     }
@@ -165,4 +165,14 @@ class Stat extends ActiveRecord\Model{
         return $col_data;
     }
 
+}
+
+public static function sheet_row($row_arr){
+    $row = new stdClass();
+    $row->ticker = $row_arr[0];
+    $row->date = $row_arr[1];
+    $row->close = $row_arr[2];
+    $row->web = $row_arr[3];
+    $row->status = $row_arr[4];
+    return $row;
 }
