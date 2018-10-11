@@ -46,7 +46,7 @@ class Stat extends ActiveRecord\Model{
     }
 
     public static function verify_rows($payload){
-        $rows = $payload['rows'];
+        $rows = static::trim_blanks($payload['rows']);
         $response = [];
         $verified_tickers = [];
         foreach($rows as $row){
@@ -76,7 +76,7 @@ class Stat extends ActiveRecord\Model{
     }
 
     public static function save_rows(){
-        $rows = $payload['rows'];
+        $rows = static::trim_blanks($payload['rows']);
         $response = [];
         $verified_tickers = [];
         foreach($rows as $row){
@@ -173,6 +173,12 @@ class Stat extends ActiveRecord\Model{
         $row->web = $row_arr[3];
         $row->status = $row_arr[4];
         return $row;
+    }
+
+    public static function trim_blanks($rows){
+        $response = [];
+        foreach($rows as $row) if(!empty($row[0] && !empty($row[1] && !empty($row[2] && !empty($row[3])) $response[] = $row;
+        return $response;
     }
 
 }
