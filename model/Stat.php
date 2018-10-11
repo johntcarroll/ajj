@@ -36,11 +36,7 @@ class Stat extends ActiveRecord\Model{
             }
         };
 
-        print_r($sql_parts);
-        print_r($params);
-        print_r(implode(" AND ", $sql_parts));
-
-        $results = Stat::all(['conditions' => array_merge(implode(" AND ", $sql_parts), $params)]); // query DB
+        $results = Stat::all(['conditions' => array_merge([implode(" AND ", $sql_parts)], $params)]); // query DB
 
         // format rows for hands on table
         $response = [];
