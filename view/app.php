@@ -10,7 +10,7 @@
         <button class='btn btn-lg btn-danger' id='db-verify'>Verify Sheet</button>
     </div>
     <div class='col col-xs-3 text-center'>
-        <button class='btn btn-lg btn-warning' id='db-save' disabled>Save to DB</button>
+        <button class='btn btn-lg btn-warning' id='db-save'>Save to DB</button>
     </div>
     <div class='col col-xs-3 text-center'>
         <button class='btn btn-lg btn-danger' id='remove-rows'>Clear Table</button>
