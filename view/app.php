@@ -25,11 +25,11 @@
     </div>
     <div class='col col-xs-4'>
         <label>Date After</label>
-        <input class='form-control' type='date' name='date_after'/>
+        <input class='form-control filter' type='date' name='date_after'/>
     </div>
     <div class='col col-xs-4'>
         <label>Date Before</label>
-        <input class='form-control' type='date' name='date_before'/>
+        <input class='form-control filter' type='date' name='date_before'/>
     </div>
 </div>
 <div class='row custom-padding'>
