@@ -11,7 +11,7 @@
     if($attempt){
         $_SESSION['user'] = $attempt->id;
         session_write_close();
-        header('Location: ../view/home.php');
+        header('Location: ../view/app.php');
     }else{
         session_write_close();
         header('Location: ../index.php?m=failed');
