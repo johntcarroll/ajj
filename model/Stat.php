@@ -87,7 +87,7 @@ class Stat extends ActiveRecord\Model{
                 if($company) $verified_tickers[$row[0]] = $company;
             }
             if($company){
-                $existing = static::find(['conditions' => 'company_id = ? AND date = ?', $company->id, $row[1]]);
+                $existing = static::find(['conditions' => ['company_id = ? AND date = ?', $company->id, $row[1]]]);
                 if($existing){
                     $existing->close = $row[2];
                     $existing->web = $row[3];
